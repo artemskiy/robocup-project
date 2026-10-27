@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  robocup:
+    image: my-ubuntu-2204        # Имя образа, который мы соберем
+    container_name: my-robocup   # Имя самого контейнера
+    volumes:
+      - .:/workspace             # Связка: текущая папка на ПК -> /workspace в контейнере
+    tty: true                    # Держим терминал открытым
+    stdin_open: true             # Разрешаем вводить команды
